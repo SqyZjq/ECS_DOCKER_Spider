@@ -1,0 +1,19 @@
+version: "3"
+services:
+  server:
+    image: redis:latest
+    container_name: swingdeploy
+    networks:
+      - dashcope_console_model_testf
+    ports:
+      - "6380:6380"
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/:/var/lib/docker:ro
+    environment:
+      TZ: Asia/Shanghai
+      LOG_ROOT_LEVEL: INFO
+
+networks:
+  dashcope_console_model_testf:
