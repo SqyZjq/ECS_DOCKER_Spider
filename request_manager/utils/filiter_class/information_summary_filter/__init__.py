@@ -1,7 +1,7 @@
 #基于信息摘要算法进行数据的去重判断和存储
 
 #1.基王内存的存健
-#2.基于redis的存储’
+#2.基于redis的存储
 #3.基于mysql的存储
 import hashlib
 
@@ -79,6 +79,7 @@ class BaseFilter(object):
         :return: True of False
         """
         pass
+
 
 
 
